@@ -1,0 +1,5 @@
+한글은 노토로 통일
+
+gnb 'Poppins'
+
+body,  'Roboto', 'Noto-sans KR'
