@@ -15,7 +15,7 @@ public class MVCBoardDAO extends DBConnPool {
 	}
 	
 	//게시물의 개수를 카운트. 검색어가 있는 경우 where절을 동적으로 추가한다.
-	public int selectCountDataboard(Map<String, Object>map) {
+	public int selectCount(Map<String, Object>map) {
 		int totalCount = 0;
 		
 		String query = "SELECT COUNT(*) FROM databoard ";
@@ -41,7 +41,7 @@ public class MVCBoardDAO extends DBConnPool {
 	
 	
 	//목록에 출력할 게시물을 페이지 단위로 얻어오기 위한 메서드
-	public List<MVCBoardDTO> selectListPageDataboard(Map<String, Object>map) {
+	public List<MVCBoardDTO> selectListPage(Map<String, Object>map) {
 		
 		//mvcboard 테이블을 대상으로 하므로 타입매개변수 확인 필요함.
 		List<MVCBoardDTO> board = new Vector<MVCBoardDTO>();
@@ -107,7 +107,7 @@ public int insertWrite(MVCBoardDTO dto) {
 			 그대로 사용한다. 
 			 나머지 값들은 컨트롤러에서 받은 후 모델(DAO)로 전달한다.
 			 */
-			String query = "INSERT INTO mvcboard ( "
+			String query = "INSERT INTO databoard ( "
 					+ " idx, name, title, content, ofile, sfile, pass) "
 					+ " VALUES ( "
 					+ " seq_board_num.NEXTVAL, ?, ?, ?, ?, ?, ?)";
@@ -135,7 +135,7 @@ public int insertWrite(MVCBoardDTO dto) {
 public MVCBoardDTO selectView(String idx) {
 	MVCBoardDTO dto = new MVCBoardDTO();
 	//인파라미터가 있는 selec 쿼리문
-	String query = "SELECT * FROM mvcboard WHERE idx=? ";	
+	String query = "SELECT * FROM databoard WHERE idx=? ";	
 	
 	try {
 		//인파라미터 설정 및 쿼리 실행
@@ -166,7 +166,7 @@ public MVCBoardDTO selectView(String idx) {
 
 	//게시물의 조회수 증가
 	public void updateVisitCount(String idx) {
-	String query="UPDATE mvcboard SET "
+	String query="UPDATE databoard SET "
 			+" visitcount=visitcount+1 "
 			+" WHERE idx=?";
 	try {
@@ -183,7 +183,7 @@ public MVCBoardDTO selectView(String idx) {
 
 	//다운로드 수 증가
 	public void downCountPlus(String idx) {
-		String sql = "UPDATE mvcboard SET "
+		String sql = "UPDATE databoard SET "
 				+" downCount=downCount+1 "
 				+" WHERE idx=?";
 		
@@ -205,7 +205,7 @@ public MVCBoardDTO selectView(String idx) {
 			 게시물을 인출할 목적이 아니므로 count()함수면 충분하다.
 			 */
 			//count()함수는 항상 경로가 있으므로 조건문 없이 호출한다.
-			String sql="SELECT COUNT(*) FROM mvcboard WHERE pass=? AND idx=?";
+			String sql="SELECT COUNT(*) FROM databoard WHERE pass=? AND idx=?";
 			psmt=con.prepareStatement(sql);
 			psmt.setString(1, pass);	
 			psmt.setString(2, idx);	
@@ -226,7 +226,7 @@ public MVCBoardDTO selectView(String idx) {
 	public int deletePost(String idx) {
 		int result=0;
 		try {
-			String query = "DELETE FROM mvcboard WHERE idx=?";
+			String query = "DELETE FROM databoard WHERE idx=?";
 			psmt=con.prepareStatement(query);
 			psmt.setString(1, idx);	
 			result = psmt.executeUpdate();
@@ -246,7 +246,7 @@ public MVCBoardDTO selectView(String idx) {
 		try {
 			/* 수정을 위한 update 쿼리문 작성
 			 (일련번호와 패스워드까지 조건문에 추가됨) */
-			String query = "UPDATE mvcboard "
+			String query = "UPDATE databoard "
 						+" SET title=?, name=?, content=?, ofile=?, sfile=? "
 						+" WHERE idx=? and pass=?";
 			

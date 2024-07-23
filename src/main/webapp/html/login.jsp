@@ -213,6 +213,11 @@
 			                </fieldset>
 			</form>
 		</div>
+			<ul class="link_wrap">
+              <li><a href="#">비밀번호 찾기</a></li>
+              <li><a href="#">아이디 찾기</a></li>
+              <li><a href="../member/signup.do">회원가입</a></li>
+            </ul>
 	</c:when>
 	<c:otherwise>
 		<div class="login_area">
@@ -225,11 +230,11 @@
 		</div>
 	</c:otherwise>
 </c:choose>        
-			<ul class="link_wrap">
+			<!-- <ul class="link_wrap">
               <li><a href="#">비밀번호 찾기</a></li>
               <li><a href="#">아이디 찾기</a></li>
               <li><a href="../member/signup.do">회원가입</a></li>
-            </ul>  
+            </ul>   -->
             
               
             

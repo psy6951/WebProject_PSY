@@ -41,7 +41,7 @@ public class DataListController extends HttpServlet {
 			map.put("searchWord", searchWord);
 		}
 		//게시물의 개수를 카운트한다. 검색어가 있다면 where절이 추가된다.
-		int totalCount =dao.selectCountDataboard(map);
+		int totalCount =dao.selectCount(map);
 
 		System.out.println(totalCount);
 		
@@ -74,11 +74,11 @@ public class DataListController extends HttpServlet {
 		
 		
 		//해당 페이지에 출력할 게시물을 List로 얻어온다.
-		List<MVCBoardDTO> boardLists = dao.selectListPageDataboard(map);
+		List<MVCBoardDTO> boardLists = dao.selectListPage(map);
 		dao.close();
 		
 		//페이지 번호를 String으로 반환
-		String pagingImg = BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, "../mvcboard/list.do");
+		String pagingImg = BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, "../databoard/list.do");
 		//페이지번호
 		map.put("pagingImg", pagingImg);
 		//전체 게시물의 개수

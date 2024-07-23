@@ -216,7 +216,7 @@
                     <input type="text" name="searchWord">
                     <button class="search_btn" type="submit">
                       <span class="blind">검색</span>
-                    </button>
+                    </button> 
                   </div>
                 </div>
               </fieldset>
@@ -276,7 +276,7 @@
               <td class="date">${ row.postdate }</td>
               <td>
 	            <c:if test="${ not empty row.ofile }">
-	            	<a href="../mvcboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
+	            	<a href="../databoard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]</a>
 	            </c:if>
               </td>
                 </tr>
@@ -284,12 +284,16 @@
 	</c:otherwise>
 </c:choose>
               </table>
+    		  <table border="1" width="90%">
+              	<tr align="center">
+              	  <td>
+                  ${ map.pagingImg }
+                  </td>
+              </table>
               
-              
-              <div class="write_btn">
-                <a href="databoard-write.html">글쓰기</a>
-              </div>
-              <div class="board_pagination">
+               <td width="100"><button type="button"
+                onclick="location.href='../databoard/write.do';">글쓰기</button></td>
+              <!-- <div class="board_pagination">
                 <a class="first page_btn" href="#"><span class="blind">첫페이지</span></a>
                 <a class="prev page_btn" href="#"><span class="blind">이전</span></a>
                 <span class="num active">1</span>
@@ -301,14 +305,12 @@
                   <span class="blind">다음</span>
                 </a>
                 <a class="last page_btn" href="#"><span class="blind">마지막페이지</span></a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </main>
-
-
-	<%@ include file="../inc/common_footer.jsp" %>
+      	<%@ include file="../inc/common_footer.jsp" %>
 
     </div>
   </body>

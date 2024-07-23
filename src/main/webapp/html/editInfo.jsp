@@ -18,7 +18,7 @@
       <header id="header" class="sub_header">
         <div class="inner">
           <h1 class="logo">
-            <a href="index.jsp"><span class="blind">한국콜마</span></a>
+            <a href="../main/index.do"><span class="blind">한국콜마</span></a>
           </h1>
           <nav class="gnb_wrap">
             <ul class="gnb">
