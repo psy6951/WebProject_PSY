@@ -243,9 +243,6 @@
 				    }
 				</script>
               
-              
-              
-              
               <form name="writeFrm" method="post" enctype="multipart/form-data"
       				action="../databoard/write.do" onsubmit="return validateForm(this);">
               <table>
@@ -266,12 +263,12 @@
                     <td><input type="file" placeholder="첨부파일을 선택하세요"></td>
                   </tr>
               </table>
-              </form>
               <button type="submit" class="write_btn">등록</button>
               <button type="button" onclick="location.href='list.do';">
                 목록
               </button>
               
+              </form>
               
              <!--  <div class="write_btn">
                 <a href="#">등록</a>

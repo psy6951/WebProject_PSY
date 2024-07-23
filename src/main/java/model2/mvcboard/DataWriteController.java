@@ -62,7 +62,7 @@ public class DataWriteController extends HttpServlet {
 		dto.setName(req.getParameter("name"));
 		dto.setTitle(req.getParameter("title"));
 		dto.setContent(req.getParameter("content"));
-		dto.setPass(req.getParameter("pass"));
+
 		
 		//첨부파일이 정상적으로 등록되어 원본파일명이 반환되었다면...
 		if(originalFileName != "") {

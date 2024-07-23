@@ -206,10 +206,10 @@
                 <legend>게시물 검색</legend>
                 <div class="board_search">
                   <div class="select_wrap">
-                    <select>
-                      <option value="">제 목</option>
-                      <option value="">내 용</option>
-                      <option value="">작성자</option>
+                    <select name="searchField">
+                      <option value="title">제 목</option>
+                      <option value="content">내 용</option>
+                      <option value="name">작성자</option>
                     </select>
                   </div>
                   <div class="search_wrap">
@@ -291,8 +291,9 @@
                   </td>
               </table>
               
-               <td width="100"><button type="button"
-                onclick="location.href='../databoard/write.do';">글쓰기</button></td>
+                <button type="button" class="write_btn"
+                onclick="location.href='../databoard/write.do';" style=";">글쓰기</button>
+                
               <!-- <div class="board_pagination">
                 <a class="first page_btn" href="#"><span class="blind">첫페이지</span></a>
                 <a class="prev page_btn" href="#"><span class="blind">이전</span></a>

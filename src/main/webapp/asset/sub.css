@@ -306,8 +306,8 @@
   background: #b3d0f7;
   position: absolute;
   right: 10px;
-/*   bottom: 15px;
- */  padding: 5px 10px;
+  /* bottom: 25px; */
+  padding: 5px 10px;
   font-size: 18px;
 }
 
