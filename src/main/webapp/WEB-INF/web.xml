@@ -7,7 +7,7 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.html</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>HelloJSP.jsp</welcome-file>
@@ -127,14 +127,14 @@
  
 <!-- 모델2 방식으로 제작하는 서블릿 게시판 -->
 <!-- 목록 매핑 -->
-<servlet>
-	<servlet-name>MVCBoardList</servlet-name>
-	<servlet-class>model2.mvcboard.ListController</servlet-class>
+<!-- <servlet>
+	<servlet-name>DataBoardList</servlet-name>
+	<servlet-class>model2.mvcboard.DataListController</servlet-class>
 </servlet>
 <servlet-mapping>
-	<servlet-name>MVCBoardList</servlet-name>
-	<url-pattern>/mvcboard/list.do</url-pattern>
-</servlet-mapping>
+	<servlet-name>DataBoardList</servlet-name>
+	<url-pattern>/databoard/list.do</url-pattern>
+</servlet-mapping> -->
    
  
  

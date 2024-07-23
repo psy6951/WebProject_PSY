@@ -37,7 +37,7 @@
                   <li><a href="#">견학문의</a></li>
                   <li><a href="freeboard-list.html">자유게시판</a></li>
                   <li><a href="qnaboard-list.html">Q&A</a></li>
-                  <li><a href="databoard-list.html">자료실</a></li>                   
+                  <li><a href="../databoard/list.do">자료실</a></li>                   
                 </ul>
               </li>
               <li>
@@ -128,7 +128,7 @@
                     <li><a href="#">견학문의</a></li>
                     <li><a href="freeboard-list.html">자유게시판</a></li>
                     <li><a href="qnaboard-list.html">Q&A</a></li>
-                    <li><a href="databoard-list.html">자료실</a></li>                     
+                    <li><a href="../databoard/list.do">자료실</a></li>                     
                   </ul>
                 </li>
                 <li>
